@@ -19,7 +19,7 @@ This project implements image-based data hiding using the Least Significant Bit 
 
 ## Project Structure
 
-main.c       - Program execution and user interaction  
+test_encode.c - Main program and command-line interface
 encode.c     - Encoding process  
 decode.c     - Decoding process  
 types.h      - User-defined data types and macros  
@@ -41,17 +41,17 @@ types.h      - User-defined data types and macros
 ## How to Compile and Run
 
 Compile: 
-gcc *.c -o steganography
+gcc test_encode.c encode.c decode.c -o encode
 
 
 Run:
 
-./steganography -e input.bmp secret.txt output.bmp
+./encode -e beautiful.bmp secret.txt stego_img.bmp
 
 
 Decode:
 
-./steganography -d output.bmp
+./encode -d stego_img.bmp
 
 
 ## Sample Output
