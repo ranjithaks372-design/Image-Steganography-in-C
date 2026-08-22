@@ -57,3 +57,5 @@ types.h       - User-defined data types and macros
 
 ```bash
 gcc test_encode.c encode.c decode.c -o encode
+./encode -e beautiful.bmp secret.txt stego_img.bmp
+./encode -d stego_img.bmp
